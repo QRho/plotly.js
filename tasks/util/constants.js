@@ -70,14 +70,12 @@ var partialBundleTraces = {
     ],
     geo: [
         'choropleth',
-        'scatter',
         'scattergeo'
     ],
     gl2d: [
         'heatmapgl',
         'parcoords',
         'pointcloud',
-        'scatter',
         'scattergl',
         'splom'
     ],
@@ -85,7 +83,6 @@ var partialBundleTraces = {
         'cone',
         'isosurface',
         'mesh3d',
-        'scatter',
         'scatter3d',
         'streamtube',
         'surface',
@@ -94,7 +91,6 @@ var partialBundleTraces = {
     mapbox: [
         'choroplethmapbox',
         'densitymapbox',
-        'scatter',
         'scattermapbox'
     ],
     strict: [

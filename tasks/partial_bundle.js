@@ -49,7 +49,7 @@ if(process.argv.length > 2) {
 
     var i, t;
 
-    var traceList = ['scatter']; // added by default
+    var traceList = [];
     for(i = 0; i < traces.length; i++) {
         t = traces[i];
         if(
