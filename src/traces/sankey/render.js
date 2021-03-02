@@ -1021,13 +1021,17 @@ module.exports = function(gd, svg, calcData, layout, callbacks) {
         .classed(c.cn.nodeLabel, true)
         .attr('transform', textFlip)
         .style('cursor', 'default')
-        .style('fill', 'black');
+        .call(svgTextUtils.convertToTspans, gd);
 
     nodeLabel
         .style('text-shadow', function(d) {
             return d.horizontal ? svgTextUtils.makeTextShadow(gd._fullLayout.paper_bgcolor) : 'none';
         })
-        .each(function(d) {Drawing.font(nodeLabel, d.textFont);});
+        .each(function(d) {
+            var e = d3.select(this);
+            Drawing.font(e, d.textFont);
+            svgTextUtils.convertToTspans(e, gd);
+        });
 
     nodeLabel
         .transition()
